@@ -1,0 +1,63 @@
+.scroll {
+	height: 100%;
+}
+.v-center-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+  flex-wrap: wrap;
+}
+.v-center-item {
+  width: 100%;
+}
+.item-select option {
+  direction: ltr;
+  padding: 10px 0px;
+  text-align: center;
+  font-weight: bold;
+}
+.range {
+  display: block;
+}
+.range-flex {
+  display: flex;
+}
+.range-flex span {
+  padding-top: 12px;
+}
+.range-selected {
+  display: table;
+  padding: 7px 10px 7px 0px;
+  width: 100%;
+  color: #444;
+  text-align: center;
+  font-size: 16px;
+}
+.bold {
+  font-weight: bold;
+}
+.dateTimePickerResult {
+  display: block;
+}
+.button.button-block.button-date-time {
+  margin-top: 0;
+  border-radius: 0px;
+  background-color: transparent;
+  border: none;
+}
+.item-input ionic-datepicker, .item-input ionic-timepicker {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.item-input.item-stacked-label ionic-datepicker, .item-input.item-stacked-label ionic-timepicker {
+  position: relative;
+}
+.item-stacked-label .button.button-block.button-date-time {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0;
+  padding-left: 0;
+}

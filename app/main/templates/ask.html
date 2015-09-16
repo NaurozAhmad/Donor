@@ -1,0 +1,70 @@
+<ion-view view-title="Ask">
+  <ion-nav-bar class="bar-stable" align-text="center" >
+    <ion-nav-back-button></ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content padding="true">
+
+    <!-- content goes here -->
+    <ion-list>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Blood Type
+        </div>
+        <select>
+          <option selected>Select</option>
+          <option>A+</option>
+          <option>A-</option>
+          <option>B+</option>
+          <option>B-</option>
+          <option>AB</option>
+          <option>O+</option>
+          <option>O-</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Location
+        </div>
+        <select>
+          <option selected>Select</option>
+          <option>Rehman Medical Institute</option>
+          <option>CMH</option>
+          <option>Sherpao Hospital</option>
+          <option>Lady Reading Hospital</option>
+        </select>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Your Phone Number</span>
+        <input type="text" placeholder="Phone Number">
+      </label>
+      <label class="item range" ng-init="pints=1">
+        <span class="input-label">Pints </span>
+        <div class="range-flex">
+          <span>1</span> <input min="1" max="5" type="range" name="pints" ng-model="pints"> <span>5</span>
+        </div>
+        <span class="range-selected">Selected: {{pints}}</span>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Date</span>
+        <ionic-datepicker input-obj="datepickerObject">
+          <button class="button button-block button-date-time">
+           <span ng-hide="gotDate">Select</span>{{datepickerObject.inputDate | date:'dd - MMMM - yyyy'}}
+          </button>
+        </ionic-datepicker>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Time</span>
+        <ionic-timepicker input-obj="timePickerObject">
+          <button class="button button-block button-date-time overflowShow">
+            <span ng-hide="gotTime">Select</span> <standard-time-meridian ng-show="gotTime" etime='epochTime'></standard-time-meridian>
+          </button>
+        </ionic-timepicker>
+      </label>
+      <a href="#/" class="button button-block button-positive">
+        Submit
+      </a>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

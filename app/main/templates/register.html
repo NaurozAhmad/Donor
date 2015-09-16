@@ -1,0 +1,42 @@
+<ion-view view-title="Register">
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-back-button></ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content padding="true">
+
+    <ion-list>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Blood Type
+        </div>
+        <select>
+          <option selected>Select</option>
+          <option>A+</option>
+          <option>A-</option>
+          <option>B+</option>
+          <option>B-</option>
+          <option>AB</option>
+          <option>O+</option>
+          <option>O-</option>
+        </select>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Last time you gave blood</span>
+        <ionic-datepicker input-obj="datepickerObject">
+          <button class="button button-block button-date-time">
+           <span ng-hide="gotDate" style="color: #A8A8A8;">Select</span>{{datepickerObject.inputDate | date:'dd - MMMM - yyyy'}}
+          </button>
+        </ionic-datepicker>
+      </label>
+      <!-- <ionic-datepicker input-obj="datepickerObject">
+        <button class="button button-block button-stable">
+          Last time you gave blood <span class="bold dateTimePickerResult">{{datepickerObject.inputDate | date:'dd - MMMM - yyyy'}}</span>
+        </button>
+      </ionic-datepicker> -->
+      <a href="#/" class="button button-block button-positive">
+        Register
+      </a>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

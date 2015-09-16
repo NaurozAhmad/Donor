@@ -1,0 +1,23 @@
+{
+  "generator-m-ionic": {
+    "answers": {
+      "appName": "Donor",
+      "appId": "com.senhoit.donor",
+      "ionicCss": true,
+      "bowerPackages": [
+        "angular-localForage#~1.2.3"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "plugins": [
+        "cordova-plugin-device",
+        "cordova-plugin-dialogs",
+        "com.ionic.keyboard",
+        "cordova-plugin-network-information",
+        "cordova-plugin-statusbar"
+      ],
+      "appModule": "Donor"
+    }
+  }
+}
