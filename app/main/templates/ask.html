@@ -11,7 +11,7 @@
         <div class="input-label">
           Blood Type
         </div>
-        <select>
+        <select ng-model="ask.type">
           <option selected>Select</option>
           <option>A+</option>
           <option>A-</option>
@@ -26,7 +26,7 @@
         <div class="input-label">
           Location
         </div>
-        <select>
+        <select ng-model="ask.location">
           <option selected>Select</option>
           <option>Rehman Medical Institute</option>
           <option>CMH</option>
@@ -36,14 +36,14 @@
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Your Phone Number</span>
-        <input type="text" placeholder="Phone Number">
+        <input type="text" placeholder="Phone Number" ng-model="ask.phone">
       </label>
-      <label class="item range" ng-init="pints=1">
+      <label class="item range">
         <span class="input-label">Pints </span>
         <div class="range-flex">
-          <span>1</span> <input min="1" max="5" type="range" name="pints" ng-model="pints"> <span>5</span>
+          <span>1</span> <input min="1" max="5" type="range" name="pints" ng-model="ask.bottles"> <span>5</span>
         </div>
-        <span class="range-selected">Selected: {{pints}}</span>
+        <span class="range-selected">Selected: {{ask.bottles}}</span>
       </label>
       <label class="item item-input">
         <span class="input-label">Date</span>
@@ -61,7 +61,7 @@
           </button>
         </ionic-timepicker>
       </label>
-      <a href="#/" class="button button-block button-positive">
+      <a href="" ng-click="askForBlood()" class="button button-block button-positive">
         Submit
       </a>
     </ion-list>
